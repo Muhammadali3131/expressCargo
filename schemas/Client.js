@@ -2,15 +2,15 @@ const { Schema, model } = require("mongoose");
 
 const clientSchema = new Schema(
   {
-    full_name: { type: String, required: true },
-    phone_number: { type: Number, required: true },
-    address: { type: String },
-    location: { type: String },
-    email: { type: String },
+    full_name: { type: String, required: true, trim: true },
+    phone_number: { type: String, required: true, trim: true },
+    address: { type: String, trim: true },
+    location: { type: String, trim: true },
+    email: { type: String, trim: true },
   },
   {
     versionKey: false,
-    timestamps: true,
+    timestamps: false,
   }
 );
 
